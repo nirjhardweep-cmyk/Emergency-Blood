@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container { text-align: center; color: white; }
+.card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.9);
+  padding: 20px; border-radius:12px;
+  width:320px; margin-top:20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+input, select, button { width:100%; padding:10px; margin:8px 0; border-radius:6px; border:1px solid #ccc; }
+button { background:red; color:white; border:none; cursor:pointer; font-weight:bold; transition:0.3s; }
+button:hover { transform:scale(1.05); }
+#result { text-align:left; margin-top:10px; color:black; }

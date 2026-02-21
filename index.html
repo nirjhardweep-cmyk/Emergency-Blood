@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emergency Blood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>🩸 Emergency Blood</h1>
+  <div class="card">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h2>Register as Donor</h2>
+  <div class="card">
+    <input type="text" id="name" placeholder="Full Name">
+    <select id="district">
+      <option value="">Select District</option>
+      <option>Dhaka</option>
+      <option>Chittagong</option>
+      <option>Rajshahi</option>
+      <option>Khulna</option>
+    </select>
+    <input type="text" id="phone" placeholder="Phone">
+    <select id="blood">
+      <option value="">Select Blood Group</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>O+</option><option>O-</option>
+      <option>AB+</option><option>AB-</option>
+    </select>
+    <button onclick="saveDonor()">Save Donor</button>
+    <button onclick="goSearch()">Search Blood</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Blood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h2>Search Donor</h2>
+  <div class="card">
+    <select id="searchBlood">
+      <option value="">Select Blood Group</option>
+      <option>A+</option><option>A-</option>
+      <option>B+</option><option>B-</option>
+      <option>O+</option><option>O-</option>
+      <option>AB+</option><option>AB-</option>
+    </select>
+    <select id="searchDistrict">
+      <option value="">Select District</option>
+      <option>Dhaka</option>
+      <option>Chittagong</option>
+      <option>Rajshahi</option>
+      <option>Khulna</option>
+    </select>
+    <button onclick="searchDonor()">Search</button>
+    <div id="result"></div>
+    <div id="map" style="height:300px; margin-top:10px;"></div>
+    <button onclick="goDashboard()">Back</button>
+  </div>
+</div>
+<script async src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h2>🧑‍💼 Admin Panel</h2>
+  <div class="card">
+    <h3>Total Users: <span id="userCount"></span></h3>
+    <h3>Total Donors: <span id="total"></span></h3>
+    <div id="donorList"></div>
+    <button onclick="logout()">Logout</button>
+  </div>
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
